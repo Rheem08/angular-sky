@@ -1,24 +1,41 @@
-<h1>Welcome to Paradise!</h1>
-<br><br>
-<h3>Please Register below!</h3>
-<form [formGroup]= "registerForm" (ngSubmit)="onSubmit()" novalidate> 
-    <label for ="f_name">Enter First name here</label>
-<input type="text" formControlName="f_name"  required/>
-<br><br>
-<label for ="l_name">Enter Last name here</label>
-<input type="text" formControlName="l_name"  required/>
-<br>
-    <label for="username">Enter username</label>
-<input type="text" formControlName="username"  required/>
-<br><br>
-<label for ="p_word">Enter password here</label>
-<input type="password" formControlName="p_word"  required/>
-<br><br>
-<label for ="email">Enter email here</label>
-<input type="text" formControlName="email"  required/>
-<br><br>
-<input type="submit" value="Register"/>
-<br><br>
 
-
-</form>
+<div class ="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Register</h1>
+                    <h5>Please fill out registration form!</h5>
+                </div>
+                <form>
+                    
+                <form [formGroup]= "registerForm" (ngSubmit)="onSubmit()" novalidate> 
+                    <div class="mb-3">
+                    <label for="f_name">Enter First Name</label>
+                <input type="text" formControlName="f_name"  required/>
+                    </div>
+                    <div class="mb-3">
+                <label for ="l_name">Enter Last Name</label>
+                <input type="text" formControlName="l_name" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="username">Enter Username</label>
+                    <input type="text" formControlName="username"  required/>
+                        </div>
+                        <div class="mb-3">
+                    <label for ="p_word">Enter Password</label>
+                    <input type="password" formControlName="p_word" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for ="email">Enter Email</label>
+                            <input type="text" formControlName="email"  required/>
+                                </div>
+                <div class="btn"><input type="submit" value="Register"/></div>
+                <br>
+                </form>
+                </form>
+                <a routerLink="/login" style="color:yellow">Already have an account? Click here to Login</a>
+            </div>
+        </div>
+    </div>
+</div>

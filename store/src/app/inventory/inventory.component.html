@@ -1,4 +1,9 @@
-<p>inventory works!</p>
+<div>
+  <h2> Book List</h2>
+  <ul *ngFor = "let b of inventory">
+    <li>{{ b.itemId }} - {{ b.title }} - {{b.author}} - {{b.category}} - {{b.cost}} - {{b.stock}}</li> 
+  </ul>
+</div>
 
 <!-- Revise this code to work with inventory items -->
 <!-- <h2>Reference(s)</h2>
