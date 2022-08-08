@@ -10,13 +10,17 @@ import { NgxNavbarModule } from 'ngx-bootstrap-navbar';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    InventoryComponent
+    InventoryComponent,
+    ProfileComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
