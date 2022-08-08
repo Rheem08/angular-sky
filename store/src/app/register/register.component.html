@@ -1,0 +1,24 @@
+<h1>Welcome to Paradise!</h1>
+<br><br>
+<h3>Please Register below!</h3>
+<form [formGroup]= "registerForm" (ngSubmit)="onSubmit()" novalidate> 
+    <label for ="f_name">Enter First name here</label>
+<input type="text" formControlName="f_name"  required/>
+<br><br>
+<label for ="l_name">Enter Last name here</label>
+<input type="text" formControlName="l_name"  required/>
+<br>
+    <label for="username">Enter username</label>
+<input type="text" formControlName="username"  required/>
+<br><br>
+<label for ="p_word">Enter password here</label>
+<input type="password" formControlName="p_word"  required/>
+<br><br>
+<label for ="email">Enter email here</label>
+<input type="text" formControlName="email"  required/>
+<br><br>
+<input type="submit" value="Register"/>
+<br><br>
+
+
+</form>

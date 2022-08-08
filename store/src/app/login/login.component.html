@@ -1,0 +1,13 @@
+<h1>Welcome to Paradise!</h1>
+<br><br>
+<h3>Please Log in below!</h3>
+<form #contactForm= "ngForm"> <!--missing ngsubmit, not sure of importance currently-->
+    <label for="username">Enter username</label>
+<input type="text" name="username" ngModel placeholder="Username" required/>
+<br><br>
+<label for ="password">Enter password here</label>
+<input type="password" name="password" ngModel placeholder="*******" required/>
+<br><br>
+<input type="submit" value="Login"/>
+<br>
+</form>

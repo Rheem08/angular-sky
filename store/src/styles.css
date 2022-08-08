@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+.spa{
+    background-color: burlywood;
+    background: linear-gradient(teal, yellow, 0.5);
+}
+.container-fluid{
+    background-color: bisque;
+}
+
+.nav-item{
+    margin: 5%;
+    font-style: oblique;
+    position:relative;
+}
+.nav-item a{
+    color:olivedrab;
+}
