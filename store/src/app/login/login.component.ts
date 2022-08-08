@@ -22,15 +22,15 @@ export class LoginComponent implements OnInit {
 }
 initializeForm(): void{
   this.loginForm = this.fb.group({
-    username: '',
-    p_word: ''
+    username: [''],
+    p_word: ['']
   })
   
 }
 onSubmit(){
   this.http.get<any>("http://localhost:8080/booky").subscribe(res=>{
-    const user = res.find((x:any)=>{
-      return x.username === this.loginForm.value.username && x.p_word === this.loginForm.value.p_word;
+    const user = res.find((a:any)=>{
+      return a.username === this.loginForm.value.username && a.p_word === this.loginForm.value.p_word;
     });
     console.log(user);
     if(user){
