@@ -11,6 +11,10 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { CartComponent } from './cart/cart.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterComponent,
     LoginComponent,
     InventoryComponent,
-    ProfileComponent
+    ProfileComponent,
+    HeaderComponent,
+    FooterComponent,
+    CartComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
