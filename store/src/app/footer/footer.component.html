@@ -1,1 +1,27 @@
-<p>footer works!</p>
+<div class ="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h3>Update Existing Book</h3>
+<form [formGroup]= "bookForm"  novalidate> 
+    <div class="mb-3">
+    <label for="bookid">Enter Book ID</label>
+<input type="text" formControlName="bookid"  required/>
+    </div>
+    <div class="mb-3">
+        <label for="cost">Enter Cost</label>
+    <input type="number" formControlName="cost"  required/>
+        </div>
+        <div class="mb-3">
+    <label for ="stock">Enter Stock</label>
+    <input type="number" formControlName="stock" required/>
+        </div>
+<div class="btn"><input type="submit" value="Update Book"/></div>
+<br>  <a routerLink="/stock-add" style="color:yellow">Want to add a new book? Click here</a>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
