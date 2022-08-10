@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {InventoryService} from '../inventory.service';
+import {Inventory} from '../inventory';
 
 @Component({
   selector: 'app-cart',

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {InventoryService} from '../inventory.service';
+import {Inventory} from '../inventory';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private inventoryService: InventoryService) { }
+inventory:Inventory | any
   ngOnInit(): void {
+    this.inventoryService.GetBooks()
+    .subscribe(data =>{
+          this.inventory = data;
+    });
   }
 
 }
