@@ -8,6 +8,7 @@ import {BookyService} from './booky.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title: any;
   
   constructor(private bookyService : BookyService){}
   booky: Booky | any;
