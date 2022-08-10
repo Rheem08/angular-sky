@@ -1,0 +1,17 @@
+.card{
+    border: none;
+    width: 500px;
+    padding: 30px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(148,217,202, 0.6);
+    background: linear-gradient(skyblue, seagreen);
+}
+
+.btn{
+    margin: 3px;
+    padding:2px;
+    
+}

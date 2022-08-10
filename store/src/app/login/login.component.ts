@@ -28,8 +28,8 @@ initializeForm(): void{
   
 }
 onSubmit(){
-  this.http.get<any>("http://localhost:8080/booky").subscribe(res=>{
-    const user = res.find((a:any)=>{
+  this.http.get<any>("http://localhost:8080/booky").subscribe(res=>{ //connects the RestAPI, performs get method
+    const user = res.find((a:any)=>{ //inside of response we are assigned the values found at the resource in the response to the user
       return a.username === this.loginForm.value.username && a.p_word === this.loginForm.value.p_word;
     });
     console.log(user);

@@ -1,1 +1,35 @@
-<p>header works!</p>
+<div class ="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h3>Add New Book</h3>
+<form [formGroup]= "inventoryForm" (ngSubmit)="onAdd()" novalidate> 
+    <div class="mb-3">
+    <label for="author">Enter Author</label>
+<input type="text" formControlName="author"  required/>
+    </div>
+    <div class="mb-3">
+<label for ="category">Enter Category</label>
+<input type="text" formControlName="category" required/>
+    </div>
+    <div class="mb-3">
+        <label for="cost">Enter Cost</label>
+    <input type="number" formControlName="cost"  required/>
+        </div>
+        <div class="mb-3">
+    <label for ="stock">Enter Stock</label>
+    <input type="number" formControlName="stock" required/>
+        </div>
+        <div class="mb-3">
+            <label for ="title">Enter Title</label>
+            <input type="text" formControlName="title"  required/>
+                </div>
+<div class="btn"><input type="submit" value="Add Book"/></div>
+<br>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
