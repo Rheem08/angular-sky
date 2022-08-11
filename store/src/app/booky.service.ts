@@ -18,16 +18,6 @@ export class BookyService {
     })
   }
    
-  // POST
-  
-    // CreateBooky(data:any): Observable<Booky>{
-    // return this.http.post<Booky>(this.baseurl , JSON.stringify(data), this.httpOptions)
-    // .pipe(
-    //   retry(1),
-    //   catchError(this.errorHandl)
-    // )
-  
-  
   // GET
   GetBooky(id:any): Observable<Booky> {
     return this.http.get<Booky>(this.baseurl + id)

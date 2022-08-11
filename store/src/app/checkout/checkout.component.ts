@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { InventoryService } from '../inventory.service';
+import {Inventory} from '../inventory';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-checkout',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-
-  constructor() { }
-
+currentUser:UserService;
+  constructor(private inventoryService: InventoryService) { }
+  //inventory: Inventory|any;
   ngOnInit(): void {
+    this.currentUser=new UserService();
+    //code in the books the user placed into the cart from the inventory
+    /*this.inventoryService.GetBooks()
+    .subscribe(data =>{
+      this.inventory=data;
+    })*/
   }
 
 }

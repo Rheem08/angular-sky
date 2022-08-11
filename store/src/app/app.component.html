@@ -20,7 +20,7 @@
       >
       </span>
     </button>
-    <h2>Welcome to paradise</h2>
+    <h2>Welcome to Skyward Books!</h2>
     <ngx-navbar-collapse id="main-nav" #collapse="ngxNavbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -41,17 +41,22 @@
         <li class ="nav-item">  
           <a routerLink="/profile">User Profile</a>
         </li>
+        <li class ="nav-item">  
+          <a routerLink="/stock-add">Add Books To Inventory</a>
+        </li>
+        <li class ="nav-item">  
+          <a routerLink="/checkout">Checkout</a>
+        </li>
       </ul>
     </ngx-navbar-collapse>
   </div>
   <br/>
-  <div class="d-flex">
-    <button class="btn btn-success">Add Inventory </button>
-  </div>
-  
+
 </nav>
 <router-outlet></router-outlet>
 </div>
 
-
+<!-- <div class="d-flex">
+  <button class="btn btn-success">Add Inventory </button>
+</div> -->
 
