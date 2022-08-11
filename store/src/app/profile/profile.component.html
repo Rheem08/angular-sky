@@ -1,6 +1,18 @@
 
 <p>Hello {{currentUser.firstName}} {{currentUser.lastName}}.</p>
 <p>You are logged in as a {{currentUser.userRole}}</p>
+<form>
+    <label for="firstName">First Name: </label>
+    <input type="text" formCon placeholder={{currentUser.firstName}} />
+    <br/><label for="lastName">Last Name:  </label>
+    <input type="text" formCon placeholder={{currentUser.lastName}} />
+    <br/>
+    <label for="email">Email: </label>
+    <input type="text" formCon placeholder={{currentUser.email}} />
+    <br/>
+    <div class="btn"><input type="submit" value="updateProfile"/></div>
+</form>
+
 <!-- 
 <nav class="navbar navbar-light bg-primary">
     <div class="container-fluid">
