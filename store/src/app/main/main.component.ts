@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {InventoryService} from '../inventory.service';
-import {Inventory} from '../inventory';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-main',
@@ -8,14 +7,10 @@ import {Inventory} from '../inventory';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor(private inventoryService: InventoryService) { }
-inventory:Inventory | any
+  itemInCart:number;
+  constructor(private cartService: CartService) {}
   ngOnInit(): void {
-    this.inventoryService.GetBooks()
-    .subscribe(data =>{
-          this.inventory = data;
-    });
+    this.cartService.numOfItems.subscribe(d=>{this.itemInCart = d.length;});
   }
 
 }
