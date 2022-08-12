@@ -1,7 +1,7 @@
 
 <p>Hello {{currentUser.firstName}} {{currentUser.lastName}}.</p>
 <p>You are logged in as a {{currentUser.userRole}}</p>
-<form>
+<form (ngSubmit)="onSubmit()">
     <label for="firstName">First Name: </label>
     <input type="text" placeholder={{currentUser.firstName}} />
     <br/><label for="lastName">Last Name:  </label>

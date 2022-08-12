@@ -9,12 +9,14 @@ import { UserService } from '../user.service';
 export class ProfileComponent implements OnInit {
   currentUser:UserService;
   profileForm: FormGroup;
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
     this.currentUser = new UserService();
-  }
+   }
+
+  ngOnInit(): void {}
+
   onSubmit() {
     alert("You clicked the update profile button");
+
   }
 }
