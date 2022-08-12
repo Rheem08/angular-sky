@@ -9,7 +9,7 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class InventoryService {
 
-  baseurl = 'http://localhost:8080/inventory';
+  baseurl = 'http://localhost:2022/inventory';
 
   constructor(private http: HttpClient) { }
 
