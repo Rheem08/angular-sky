@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { UserService } from '../user.service';
 @Component({
   selector: 'app-profile',
@@ -7,10 +8,13 @@ import { UserService } from '../user.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser:UserService;
+  profileForm: FormGroup;
   constructor() { }
 
   ngOnInit(): void {
     this.currentUser = new UserService();
   }
-
+  onSubmit() {
+    alert("You clicked the update profile button");
+  }
 }

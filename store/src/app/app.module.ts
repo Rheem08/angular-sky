@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
 import { MainComponent } from './main/main.component';
+import { ProductComponent } from './product/product.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     FooterComponent,
     CartComponent,
     MainComponent,
+    ProductComponent,
     CheckoutComponent
   ],
   imports: [

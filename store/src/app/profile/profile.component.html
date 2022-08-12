@@ -3,14 +3,23 @@
 <p>You are logged in as a {{currentUser.userRole}}</p>
 <form>
     <label for="firstName">First Name: </label>
-    <input type="text" formCon placeholder={{currentUser.firstName}} />
+    <input type="text" placeholder={{currentUser.firstName}} />
     <br/><label for="lastName">Last Name:  </label>
-    <input type="text" formCon placeholder={{currentUser.lastName}} />
+    <input type="text" placeholder={{currentUser.lastName}} />
     <br/>
     <label for="email">Email: </label>
-    <input type="text" formCon placeholder={{currentUser.email}} />
+    <input type="text" placeholder={{currentUser.email}} />
     <br/>
-    <div class="btn"><input type="submit" value="updateProfile"/></div>
+    <label for="userName">User Name: </label>
+    <input type="text" placeholder={{currentUser.userName}} />
+    <br/>
+    <label for="password">Password: </label>
+    <input type="password">
+    <br/>
+    <label for="password2">Reenter Password: </label>
+    <input type="password">
+    <br/>
+    <div class="btn"><input type="submit" value="Update Profile"/></div>
 </form>
 
 <!-- 

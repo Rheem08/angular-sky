@@ -6,6 +6,7 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,8 +14,14 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  public static valid:boolean=false
+  public static invalid:boolean=true;
+  
 
-  constructor(private bookyService: BookyService, private fb: FormBuilder, private http: HttpClient, private router: Router){}
+  constructor(private bookyService: BookyService, private fb: FormBuilder, 
+    private http: HttpClient, private router: Router){
+
+    }
   booky: Booky | any;
 
   ngOnInit(): void {
@@ -28,14 +35,15 @@ initializeForm(): void{
   
 }
 onSubmit(){
-  this.http.get<any>("http://localhost:8080/booky").subscribe(res=>{ //connects the RestAPI, performs get method
+  this.http.get<any>("http://localhost:2022/booky").subscribe(res=>{ //connects the RestAPI, performs get method
     const user = res.find((a:any)=>{ //inside of response we are assigned the values found at the resource in the response to the user
       return a.username === this.loginForm.value.username && a.p_word === this.loginForm.value.p_word;
     });
-    console.log(user);
+    this.bookyService.setValue(false)
+
     if(user){
     alert("Login successful");
-    this.router.navigate(['profile']); //profile hasn't been created yet
+    this.router.navigate(['inventory']); 
   }else {
     alert("User not found!");
   }
@@ -43,4 +51,5 @@ onSubmit(){
   alert("something went wrong...");
 })
 }
+
 }
