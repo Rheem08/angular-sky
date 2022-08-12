@@ -1,23 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, BehaviorSubject} from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Booky } from './Booky';
+
 @Injectable({
   providedIn: 'root'
 })
 export class BookyService {
+  
+  private auth: BehaviorSubject<boolean>;
     
   baseurl = 'http://localhost:8080/booky';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {this.auth = new BehaviorSubject<boolean>(false) }
 
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   }
-   
+  makeTru(x:boolean){
+    return x=false
+  }
+  setValue(newValue:any): void {
+    this.auth.next(newValue)
+  }
+  getValue():Observable<boolean>{
+    return this.auth.asObservable()
+  }
   // GET
   GetBooky(id:any): Observable<Booky> {
     return this.http.get<Booky>(this.baseurl + id)
