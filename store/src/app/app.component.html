@@ -26,10 +26,10 @@
         <li class="nav-item">
           <a href="#">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"  *ngIf ='rity'>
           <a routerLink="/login">Login </a><br>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"  *ngIf ='rity'>
           <a routerLink="/register">Register</a>
         </li>
         <li class="nav-item">
@@ -38,10 +38,10 @@
         <li class="nav-item">
           <a routerLink="/shop">Shop</a>
         </li>
-        <li class ="nav-item">  
+        <li class ="nav-item" *ngIf ='!rity'>  
           <a routerLink="/profile">User Profile</a>
         </li>
-        <li class ="nav-item">  
+        <li class ="nav-item" *ngIf ='!rity'>  
           <a routerLink="/stock-add">Add Books To Inventory</a>
         </li>
         <li class ="nav-item">  
