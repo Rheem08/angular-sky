@@ -11,7 +11,7 @@ export class BookyService {
   
   private auth: BehaviorSubject<boolean>;
     
-  baseurl = 'http://localhost:2022/booky';
+  baseurl = 'http://localhost:2022/booky/';
 
   constructor(private http: HttpClient) {this.auth = new BehaviorSubject<boolean>(false) }
 

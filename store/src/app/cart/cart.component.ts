@@ -1,20 +1,50 @@
 import { Component, OnInit } from '@angular/core';
-import {InventoryService} from '../inventory.service';
-import {Inventory} from '../inventory';
-import { CartService } from '../cart.service';
-
+import { CartItem } from '../cart-item';
+import { MessengerService } from '../messenger.service';
+import { Product } from '../product';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
-
-  constructor(private cartService: CartService){}
+  product:Product;
+  cartItems:CartItem[] = [];
+  cartTotal = 0;
+  constructor(private msg:MessengerService){}
 
   ngOnInit(): void {
-   // this.cartService.cartItems.subscribe(data=>{this.items = data;});
+
+    this.msg.getMsg().subscribe((prod:any) => {
+      this.addProductToCart(prod)})
+    }
+
+
+    addProductToCart(product:Product)
+    {
+      let productExists = false
+
+      for(let i in this.cartItems){
+        if (this.cartItems[i].productId === product.id){
+        this.cartItems[i].qty++
+        productExists=true;
+        break;
+      }}
+
+      if (!productExists){
+        this.cartItems.push({
+          productId: product.id,
+          productName: product.title,
+          price: product.price,
+          qty: 1
+        })
+      }
+
+  this.cartTotal=0
+  this.cartItems.forEach(item => {
+    this.cartTotal += (item.qty * item.price)}
+  )}
   }
 
-}
+
+

@@ -14,9 +14,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CartComponent } from './cart/cart.component';
-import { MainComponent } from './main/main.component';
-import { ProductComponent } from './product/product.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CartItemComponent } from './cart-item/cart-item.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductItemComponent } from './product-item/product-item.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
     HeaderComponent,
     FooterComponent,
     CartComponent,
+    CheckoutComponent,
+    CartItemComponent,
+    ProductListComponent,
+    ProductItemComponent,
     MainComponent,
-    ProductComponent,
-    CheckoutComponent
   ],
   imports: [
     BrowserModule,

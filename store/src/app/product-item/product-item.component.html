@@ -1,0 +1,11 @@
+  <div class="row">
+      <div class="row">
+        <div class="col"> 
+            <p class="card-text">
+                <strong>{{ productItem.price | currency }}</strong>                
+            <h4>{{productItem.title}}</h4>
+            <p><button class="btn btn-success" (click)="AddtoCart()">Add to Cart</button></p>
+        </div>
+      </div>
+      <hr>
+    </div>
