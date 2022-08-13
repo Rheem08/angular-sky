@@ -1,6 +1,25 @@
-<p>checkout works!</p>
-<br>
-<h3>{{currentUser.firstName}} {{currentUser.lastName}}</h3>
-<br><!--grab user data about the book
-    Also design a complete checkout menu-->
+<section *ngIf="!completed; else complete">
+  <div class="card">
+    <H5>Find everything you need?</H5>
+    <h6>Thanks for shopping with Skyward!</h6>
+    <ol>
+      <li class="checkout" *ngFor="let p of cart; let ind = index">
+        {{ p.productName }} -- {{ p.price }} x {{ p.qty }}
+      </li>
+    </ol>
+    <p id="total">Total: {{ this.total | currency }}</p>
+    <button class="btn" (click)="submitOrder()">submit</button>
+  </div>
+</section>
+<ng-template #complete>
+  <section>
+    <div class="card">
+      <h3>Thanks for your order of : {{ this.total }}</h3>
+      <button (click)="redirect()">Shop again?</button>
+    </div>
+  </section>
+</ng-template>
+<h3>{{ currentUser.firstName }} {{ currentUser.lastName }}</h3>
+<br /><!--grab user data about the book
+      Also design a complete checkout menu-->
 <!--<h3>{{ currentUser.itemId }} - {{ currentUser.title }} - {{currentUser.author}} - {{currentUser.category}} - ${{currentUser.cost}} - {{currentUser.stock}} Stock</h3>-->

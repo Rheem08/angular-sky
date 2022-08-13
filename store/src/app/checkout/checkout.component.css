@@ -1,0 +1,38 @@
+.card {
+  border: none;
+  width: 500px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(148, 217, 202, 0.6);
+  background: linear-gradient(skyblue, seagreen);
+  font-family: Helvetica;
+}
+
+.btn {
+  margin: 3px;
+  padding: 2px;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn:hover {
+  background-color: #7fc8df;
+}
+
+.checkout {
+  text-align: left;
+  color: aliceblue;
+  stroke: black;
+  font-weight: 700;
+  stroke-opacity: 100%;
+}
+
+#total {
+  font-weight: 500;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+}
