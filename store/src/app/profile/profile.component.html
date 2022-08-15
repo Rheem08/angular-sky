@@ -1,23 +1,23 @@
 
 <p>Hello {{myUser.firstName}} {{myUser.lastName}}. </p>
 <p>You are logged in as a {{currentUser.userRole}}</p>
-<form (ngSubmit)="onSubmit()">
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <label for="firstName">First Name: </label>
-    <input type="text" placeholder={{myUser.firstName}} />
+    <input type="text" formControlName="firstName" placeholder={{myUser.firstName}} />
     <br/><label for="lastName">Last Name:  </label>
-    <input type="text" placeholder={{myUser.lastName}} />
+    <input type="text" formControlName="lastName" placeholder={{myUser.lastName}} />
     <br/>
     <label for="email">Email: </label>
-    <input type="text" placeholder={{myUser.email}} />
+    <input type="text" formControlName="email" placeholder={{myUser.email}} />
     <br/>
     <label for="userName">User Name:  </label>
-    <input type="text" placeholder={{myUser.userName}} />
+    <input type="text" formControlName="userName" placeholder={{myUser.userName}} />
     <br/>
     <label for="password">Password: </label>
-    <input type="password">
+    <input type="password" formControlName="password">
     <br/>
     <label for="password2">Reenter Password: </label>
-    <input type="password">
+    <input type="password" formControlName="password">
     <br/>
     <div class="btn"><input type="submit" value="Update Profile"/></div>
 </form>
