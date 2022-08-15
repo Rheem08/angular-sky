@@ -1,17 +1,17 @@
 
-<p>Hello {{currentUser.firstName}} {{currentUser.lastName}}.</p>
+<p>Hello {{myUser.firstName}} {{myUser.lastName}}. </p>
 <p>You are logged in as a {{currentUser.userRole}}</p>
 <form (ngSubmit)="onSubmit()">
     <label for="firstName">First Name: </label>
-    <input type="text" placeholder={{currentUser.firstName}} />
+    <input type="text" placeholder={{myUser.firstName}} />
     <br/><label for="lastName">Last Name:  </label>
-    <input type="text" placeholder={{currentUser.lastName}} />
+    <input type="text" placeholder={{myUser.lastName}} />
     <br/>
     <label for="email">Email: </label>
-    <input type="text" placeholder={{currentUser.email}} />
+    <input type="text" placeholder={{myUser.email}} />
     <br/>
-    <label for="userName">User Name: </label>
-    <input type="text" placeholder={{currentUser.userName}} />
+    <label for="userName">User Name:  </label>
+    <input type="text" placeholder={{myUser.userName}} />
     <br/>
     <label for="password">Password: </label>
     <input type="password">

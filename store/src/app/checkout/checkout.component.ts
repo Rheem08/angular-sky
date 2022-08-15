@@ -29,7 +29,8 @@ export class CheckoutComponent implements OnInit {
     private ord: OrderService,
     private router: Router,
     private c: CartService,
-    private http: HttpClient
+    private http: HttpClient,
+    public myUser:UserService
   ) {}
   httpOptions = {
     headers: new HttpHeaders({
