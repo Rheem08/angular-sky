@@ -8,6 +8,11 @@ import { Booky } from './Booky';
   providedIn: 'root'
 })
 export class BookyService {
+  username: string;
+  p_word: string;
+  email: string;
+  f_name: string;
+  l_name: string;
   
   private auth: BehaviorSubject<boolean>;
     
@@ -48,8 +53,9 @@ export class BookyService {
   }
   
   // PUT
-  UpdateBooky(id:any, data:any): Observable<Booky> {
-    return this.http.put<Booky>(this.baseurl + id, JSON.stringify(data), this.httpOptions)
+  UpdateBooky(id:number, data:any) {
+    return this.http.put<Booky>(this.baseurl+id, data)
+    //return this.http.put<Booky>(this.baseurl+id, JSON.stringify(data))
     .pipe(
       retry(1),
       catchError(this.errorHandl)

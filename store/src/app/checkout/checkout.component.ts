@@ -8,6 +8,9 @@ import { OrderService } from '../order.service';
 import { Router } from '@angular/router';
 import { CartItem } from '../cart-item';
 import { CartService } from '../cart.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Order } from '../order';
+
 
 @Component({
   selector: 'app-checkout',
@@ -25,8 +28,16 @@ export class CheckoutComponent implements OnInit {
     private prod: ProductService,
     private ord: OrderService,
     private router: Router,
-    private c: CartService
+    private c: CartService,
+    private http: HttpClient,
+    public myUser:UserService
   ) {}
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+  happyGuy:Order|any;
   //inventory: Inventory|any;
   ngOnInit(): void {
     this.currentUser = new UserService();
@@ -62,10 +73,15 @@ export class CheckoutComponent implements OnInit {
     };
     this.ord
       .postOrder(newOrder)
-      .subscribe(() => console.log('completing order'));
+      .subscribe(() => console.log('completing order', newOrder));
     alert('Order has been completed');
     this.completed = true;
-  }
+//     for (var x of happyGuy) {
+//       console.log(x.subtotal)
+//  }
+    this.http.post<any>("http://localhost:2022/order", newOrder).subscribe(res=>{
+    alert("Order Submitted Successfully")}
+  )}
 
   redirect() {
     this.completed = false;

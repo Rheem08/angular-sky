@@ -17,6 +17,6 @@ export class OrderService {
   };
 
   postOrder(order: Order): Observable<Order> {
-    return this.http.post<Order>(this.baseurl + '/add', order);
+    return this.http.post<Order>(this.baseurl, order);
   }
 }

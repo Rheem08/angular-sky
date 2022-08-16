@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
 }
 onAdd(){
-  this.http.post<any>("http://localhost:8080/inventory", this.inventoryForm.value).subscribe(res=>{
+  this.http.post<any>("http://localhost:2022/inventory", this.inventoryForm.value).subscribe(res=>{
     alert("Book added successfully");
     this.inventoryForm.reset()
 })

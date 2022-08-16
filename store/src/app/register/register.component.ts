@@ -34,6 +34,7 @@ export class RegisterComponent implements OnInit {
 onSubmit(){
   this.http.post<any>("http://localhost:2022/booky", this.registerForm.value).subscribe(res=>{
     alert("Registration successful");
+    console.log(this.registerForm.value)
     this.registerForm.reset()
     this.router.navigate(['login']);
   },err=>{
